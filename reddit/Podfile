@@ -6,6 +6,8 @@ target 'reddit' do
   use_frameworks!
 
   # Pods for reddit
+  
+  pod 'Alamofire', '~> 5.5'
 
   target 'redditTests' do
     inherit! :search_paths
