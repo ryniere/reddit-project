@@ -17,6 +17,10 @@
 		41109F672783581200FE2392 /* redditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41109F662783581200FE2392 /* redditTests.swift */; };
 		41109F712783581300FE2392 /* redditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41109F702783581300FE2392 /* redditUITests.swift */; };
 		41109F732783581300FE2392 /* redditUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41109F722783581300FE2392 /* redditUITestsLaunchTests.swift */; };
+		41109F812783631600FE2392 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41109F802783631600FE2392 /* Post.swift */; };
+		41109F83278366A200FE2392 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41109F82278366A200FE2392 /* ServiceProtocol.swift */; };
+		41109F852783673300FE2392 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41109F842783673300FE2392 /* Error.swift */; };
+		41109F872783676100FE2392 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41109F862783676100FE2392 /* Service.swift */; };
 		4BC0791589CCED984CEBEAA6 /* Pods_reddit_redditUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FC157A0C33263D749620B6 /* Pods_reddit_redditUITests.framework */; };
 		DDFC1B76C17CC51BB1FA8D22 /* Pods_redditTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0271313EF6561033542F4564 /* Pods_redditTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +60,10 @@
 		41109F6C2783581300FE2392 /* redditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = redditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41109F702783581300FE2392 /* redditUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redditUITests.swift; sourceTree = "<group>"; };
 		41109F722783581300FE2392 /* redditUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redditUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		41109F802783631600FE2392 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		41109F82278366A200FE2392 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		41109F842783673300FE2392 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		41109F862783676100FE2392 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		5AB69EF05B0CAB71915700F5 /* Pods-redditTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-redditTests.debug.xcconfig"; path = "Target Support Files/Pods-redditTests/Pods-redditTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66A6987643115F7318C02CB6 /* Pods-reddit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reddit.debug.xcconfig"; path = "Target Support Files/Pods-reddit/Pods-reddit.debug.xcconfig"; sourceTree = "<group>"; };
 		88809CF39AA0BB620067377B /* Pods-reddit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reddit.release.xcconfig"; path = "Target Support Files/Pods-reddit/Pods-reddit.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 		41109F4E2783580F00FE2392 /* reddit */ = {
 			isa = PBXGroup;
 			children = (
+				41109F7F278362EF00FE2392 /* Services */,
 				41109F4F2783580F00FE2392 /* AppDelegate.swift */,
 				41109F512783580F00FE2392 /* SceneDelegate.swift */,
 				41109F532783580F00FE2392 /* ViewController.swift */,
@@ -144,6 +153,17 @@
 			path = redditUITests;
 			sourceTree = "<group>";
 		};
+		41109F7F278362EF00FE2392 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				41109F802783631600FE2392 /* Post.swift */,
+				41109F82278366A200FE2392 /* ServiceProtocol.swift */,
+				41109F842783673300FE2392 /* Error.swift */,
+				41109F862783676100FE2392 /* Service.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9D69738CE7594E260FD11943 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +184,6 @@
 				5AB69EF05B0CAB71915700F5 /* Pods-redditTests.debug.xcconfig */,
 				0669EBDE27C717D611F537CB /* Pods-redditTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -408,8 +427,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				41109F542783580F00FE2392 /* ViewController.swift in Sources */,
+				41109F872783676100FE2392 /* Service.swift in Sources */,
 				41109F502783580F00FE2392 /* AppDelegate.swift in Sources */,
 				41109F522783580F00FE2392 /* SceneDelegate.swift in Sources */,
+				41109F812783631600FE2392 /* Post.swift in Sources */,
+				41109F852783673300FE2392 /* Error.swift in Sources */,
+				41109F83278366A200FE2392 /* ServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
